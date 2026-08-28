@@ -113,10 +113,11 @@ function initTypewriter() {
   if (!typingElement) return;
 
   const roles = [
-    'Full Stack Engineer',
-    'AI & Bioinformatics Developer',
-    'Open Source Contributor',
-    'Cloud & DevOps Enthusiast'
+    'Planet Habitability',
+    'Exoplanet Atmospheres',
+    'Computational Astrophysics',
+    'Stellar-Planetary Systems',
+    'Astrophysics @ Uni Vienna'
   ];
 
   let roleIndex = 0;
@@ -130,11 +131,11 @@ function initTypewriter() {
     if (isDeleting) {
       typingElement.textContent = currentRole.substring(0, charIndex - 1);
       charIndex--;
-      typingSpeed = 50;
+      typingSpeed = 45;
     } else {
       typingElement.textContent = currentRole.substring(0, charIndex + 1);
       charIndex++;
-      typingSpeed = 110;
+      typingSpeed = 95;
     }
 
     if (!isDeleting && charIndex === currentRole.length) {
@@ -153,63 +154,103 @@ function initTypewriter() {
   type();
 }
 
-// 5. Animated Number Counters
-function initCounterAnimation() {
-  const counters = document.querySelectorAll('.stat-number');
-  let animated = false;
+// 5. Publications Filter & BibTeX Copy Interactivity
+function initPublications() {
+  const filterBtns = document.querySelectorAll('.pub-filter-btn');
+  const pubCards = document.querySelectorAll('.publication-card');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !animated) {
-        animated = true;
-        counters.forEach(counter => {
-          const target = +counter.getAttribute('data-target');
-          const suffix = counter.getAttribute('data-suffix') || '';
-          let count = 0;
-          const increment = Math.ceil(target / 40);
-          
-          const updateCount = () => {
-            count += increment;
-            if (count < target) {
-              counter.textContent = count + suffix;
-              setTimeout(updateCount, 35);
-            } else {
-              counter.textContent = target + suffix;
-            }
-          };
-          updateCount();
+  if (filterBtns.length && pubCards.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-pub-filter');
+
+        pubCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter || card.dataset.categories?.includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
         });
-      }
+      });
     });
-  }, { threshold: 0.5 });
+  }
 
-  const statsSection = document.getElementById('about');
-  if (statsSection) observer.observe(statsSection);
-}
+  // BibTeX toggle & copy handlers
+  const bibtexBtns = document.querySelectorAll('.btn-bibtex');
+  bibtexBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = btn.closest('.publication-card');
+      if (!card) return;
 
-// 6. Timeline Tab Switcher (Experience vs Education)
-function initTimelineTabs() {
-  const tabBtns = document.querySelectorAll('.timeline-tab-btn');
-  const expTimeline = document.getElementById('timeline-experience');
-  const eduTimeline = document.getElementById('timeline-education');
-
-  if (!tabBtns.length || !expTimeline || !eduTimeline) return;
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const target = btn.getAttribute('data-tab');
-      if (target === 'experience') {
-        expTimeline.style.display = 'block';
-        eduTimeline.style.display = 'none';
-      } else {
-        expTimeline.style.display = 'none';
-        eduTimeline.style.display = 'block';
+      const bibtexBlock = card.querySelector('.pub-bibtex-block');
+      if (bibtexBlock) {
+        const isHidden = bibtexBlock.classList.toggle('active');
+        btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
       }
     });
   });
+
+  const copyBibtexBtns = document.querySelectorAll('.btn-copy-bibtex');
+  copyBibtexBtns.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const codeElement = btn.parentElement.querySelector('code');
+      if (!codeElement) return;
+
+      const bibtexText = codeElement.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(bibtexText);
+        const originalText = btn.innerHTML;
+        btn.innerHTML = `
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg> Copied!
+        `;
+        btn.classList.add('copied');
+        
+        if (typeof showToast === 'function') {
+          showToast('BibTeX citation copied to clipboard!', 'success');
+        }
+
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.classList.remove('copied');
+        }, 2200);
+      } catch (err) {
+        console.error('Failed to copy BibTeX: ', err);
+      }
+    });
+  });
+}
+
+// 6. Conferences & Workshops Filter
+function initConferences() {
+  const filterBtns = document.querySelectorAll('.conf-filter-btn');
+  const confCards = document.querySelectorAll('.conference-card');
+
+  if (filterBtns.length && confCards.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-conf-filter');
+
+        confCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
 }
 
 // Initialize all modules
@@ -218,6 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initScrollSpy();
   initTypewriter();
-  initCounterAnimation();
-  initTimelineTabs();
+  initPublications();
+  initConferences();
 });

@@ -1,20 +1,21 @@
-# Anuja Rao Rane - Personal Portfolio Website
+# Anuja Raorane - Academic & Research Website
 
 [![Deploy Portfolio to GitHub Pages](https://github.com/anuja-dr/anujadr.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/anuja-dr/anujadr.github.io/actions/workflows/deploy.yml)
 [![Live Site](https://img.shields.io/badge/Live-Site-6366f1?style=flat&logo=google-chrome&logoColor=white)](https://anuja-dr.github.io)
 
-A modern, fast, responsive personal portfolio website built with semantic HTML5, modern CSS3 (custom properties, glassmorphism, responsive grid), and modular JavaScript. Automated with GitHub Actions for zero-config CI/CD continuous deployment to GitHub Pages.
+Personal academic and research portfolio of **Anuja Raorane**, PhD Student at the **Institute of Astrophysics, University of Vienna**, focusing on **Planet Habitability**, exoplanet atmospheres, and computational climate modeling.
 
 ---
 
 ## 🌟 Features
 
+- **🪐 Astrophysics & Habitability Showcase**: Detailed sections for research focus, numerical simulations, and observational spectroscopy.
+- **📚 Interactive Publications Hub**: Categorized peer-reviewed articles, preprints, DOI/ADS links, and one-click BibTeX citation copying.
+- **🎤 Conferences & Workshops**: Chronological archive of contributed talks, posters, and summer schools.
 - **🎨 Modern Dark & Light Mode**: Seamless theme toggler with persistent `localStorage` memory and OS system preference sync (`prefers-color-scheme`).
-- **📱 Fully Responsive**: Pixel-perfect layouts optimized for mobile, tablet, laptop, and ultra-wide screens.
-- **⚡ Dynamic Project Showcase**: Interactive category filters with smooth animations and direct links to live demos and GitHub repositories.
-- **📈 Animated Counters & Micro-Interactions**: Smooth scroll spy, floating glow aesthetics, dynamic typewriter text, and animated metrics.
-- **📬 Interactive Contact Hub**: Direct copy-to-clipboard email action, interactive form validation with toast notifications, and client-side feedback.
-- **🚀 Automated GitHub Actions CI/CD**: Automatic deployment to GitHub Pages whenever changes are pushed to `main`.
+- **📱 Fully Responsive**: Pixel-perfect layout optimized for mobile, tablet, laptop, and desktop displays.
+- **📬 Contact Hub**: Direct copy-to-clipboard email action, academic profile links (NASA ADS, Google Scholar, ORCID), and contact form.
+- **🚀 Automated GitHub Actions CI/CD**: Automatic deployment to GitHub Pages on every push to `main`.
 
 ---
 
@@ -25,14 +26,14 @@ A modern, fast, responsive personal portfolio website built with semantic HTML5,
 │   └── workflows/
 │       └── deploy.yml      # GitHub Actions automated workflow for GitHub Pages
 ├── assets/
-│   └── favicon.svg         # Modern vector brand favicon
+│   └── favicon.svg         # Vector brand favicon
 ├── css/
-│   ├── style.css           # Layout, component styling, animations & media queries
+│   ├── style.css           # Layout, academic components, publications & animations
 │   └── themes.css          # Design tokens & dark/light theme definitions
 ├── js/
-│   ├── app.js              # Theme switcher, scroll spy, typewriter, counters
+│   ├── app.js              # Theme switcher, scroll spy, typewriter, publications & conference filters
 │   ├── contact.js          # Contact form, toast system & clipboard interaction
-│   └── projects.js         # Projects data store & dynamic filtering logic
+│   └── projects.js         # Research projects data store & dynamic filtering logic
 ├── .gitignore              # Git ignore rules
 ├── index.html              # Main semantic HTML5 structure & SEO meta tags
 └── README.md               # Project documentation
@@ -42,7 +43,7 @@ A modern, fast, responsive personal portfolio website built with semantic HTML5,
 
 ## 🚀 Local Development
 
-To run and preview the portfolio locally:
+To run and preview the site locally:
 
 ### Option 1: Using Python's built-in HTTP server
 ```bash
@@ -55,20 +56,13 @@ Then visit `http://localhost:8000` in your web browser.
 npx serve .
 ```
 
-### Option 3: VS Code Live Server
-Right-click `index.html` in VS Code and select **"Open with Live Server"**.
-
 ---
 
 ## ⚙️ GitHub Pages Deployment Setup
 
 This repository is pre-configured with a GitHub Actions workflow (`.github/workflows/deploy.yml`).
 
-To enable GitHub Pages in your GitHub repository:
-1. Go to your repository **Settings** on GitHub (`https://github.com/anuja-dr/anujadr.github.io/settings`).
-2. Navigate to **Pages** in the left sidebar (under "Code and automation").
-3. Under **Build and deployment > Source**, select **GitHub Actions**.
-4. Every push to the `main` branch will automatically trigger the workflow and publish the site to `https://anuja-dr.github.io`.
+Every push to the `main` branch automatically triggers the workflow and publishes the site to `https://anuja-dr.github.io`.
 
 ---
 
