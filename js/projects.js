@@ -5,70 +5,60 @@
 
 const researchProjects = [
   {
-    id: 'habitability-climate-model',
-    title: 'Exoplanetary Climate & Habitability Modeling',
-    category: 'climate',
-    categoryLabel: 'Habitability & Climate',
-    description: 'Investigating atmospheric circulation and surface temperature regimes on terrestrial exoplanets orbiting M-dwarf and solar-type stars using 3D Global Climate Models (GCMs).',
-    tags: ['Python', 'Fortran', '3D GCM', 'Radiative Transfer', 'Habitable Zone'],
-    demoUrl: 'https://github.com/anuja-dr',
+    id: 'phd-atmospheric-escape',
+    title: 'Non-Thermal Escape Processes on Early Earth, Mars, and Venus',
+    category: 'escape',
+    categoryLabel: 'Atmospheric Escape & Evolution',
+    period: '04.2025 – Present',
+    institution: 'University of Vienna, Austria',
+    supervisor: 'Dr. Kristina Kislyakova',
+    description: 'Investigating non-thermal atmospheric escape driven by solar wind and magnetospheric interactions at Earth, Venus, and Mars. These processes play a key role in shaping the long-term evolution and habitability of rocky planets. Combining numerical modeling tools and validating them against observations.',
+    tags: ['PhD Thesis', 'Non-Thermal Escape', 'Solar Wind', 'Magnetosphere', 'Venus & Mars', 'Early Earth', 'Numerical Modeling'],
+    demoUrl: '#publications',
     githubUrl: 'https://github.com/anuja-dr',
     iconType: 'planet'
   },
   {
-    id: 'transmission-spectroscopy',
-    title: 'Atmospheric Transmission Spectroscopy Retrieval',
-    category: 'atmosphere',
-    categoryLabel: 'Atmospheres & Spectra',
-    description: 'Forward modeling and Bayesian atmospheric retrieval pipelines for detecting water vapor, carbon dioxide, methane, and potential biosignatures in exoplanet spectra (JWST / Ariel).',
-    tags: ['Python', 'PyTorch', 'Bayesian MCMC', 'JWST Data', 'Spectroscopy'],
+    id: 'giant-planet-formation',
+    title: 'Giant Planet Formation in the Outer Solar System',
+    category: 'formation',
+    categoryLabel: 'Planet Formation',
+    period: '06.2023 – 08.2024',
+    institution: 'CSFK, Budapest, Hungary',
+    supervisor: 'Dr. Ramon Brasser',
+    description: 'Running N-body simulations based on pebble and planetesimal accretion in the outer solar system gas disk to investigate growth pathways, migration, and timescale constraints for giant planets. Resulted in peer-reviewed publication in Icarus (2024).',
+    tags: ['N-body Simulations', 'Pebble Accretion', 'Planetesimals', 'Outer Solar System', 'Gas Disk', 'Icarus 2024'],
+    demoUrl: 'https://doi.org/10.1016/j.icarus.2024.116231',
+    githubUrl: 'https://github.com/anuja-dr',
+    iconType: 'orbit'
+  },
+  {
+    id: 'spectro-polarimetric-earth',
+    title: 'Spectro-Polarimetric Data Regeneration for Earth (Chandrayaan-3 SHAPE)',
+    category: 'spectroscopy',
+    categoryLabel: 'Spectroscopy & Remote Sensing',
+    period: '11.2023 – 01.2024',
+    institution: 'U.R. Rao Satellite Centre, ISRO, Bangalore, India',
+    supervisor: 'Mr. Bhavesh Jaiswal',
+    description: 'Using the Planetary Spectrum Generator (NASA PSG) and MODIS Cloud Data Products to reproduce Earth’s spectral and polarization features as observed from the SHAPE (Spectro-polarimetry of HAbitable Planet Earth) payload onboard the Chandrayaan-3 Orbiter.',
+    tags: ['Planetary Spectrum Generator', 'NASA PSG', 'MODIS Cloud Data', 'Chandrayaan-3 SHAPE', 'Earth as Exoplanet', 'ISRO'],
     demoUrl: 'https://github.com/anuja-dr',
     githubUrl: 'https://github.com/anuja-dr',
     iconType: 'spectrum'
   },
   {
-    id: 'stellar-radiation-escape',
-    title: 'Stellar Wind & UV Atmospheric Escape Simulation',
-    category: 'stellar',
-    categoryLabel: 'Stellar Interactions',
-    description: 'Simulating hydrodynamic atmospheric escape driven by stellar XUV irradiation and coronal mass ejections (CMEs) to constrain the atmospheric lifetime of close-in habitable zone planets.',
-    tags: ['Hydrodynamics', 'Stellar Flares', 'XUV Radiation', 'Atmospheric Loss'],
-    demoUrl: 'https://github.com/anuja-dr',
+    id: 'saturn-growth-timescales',
+    title: 'Formation of Saturn and Distribution of its Growth Times',
+    category: 'formation',
+    categoryLabel: 'Planet Formation',
+    period: '06.2022 – 04.2023',
+    institution: 'IISER Pune, India',
+    supervisor: 'Dr. Ramon Brasser, Dr. Shreyas Managave',
+    description: 'Running N-body simulations in the outer solar system gas disk and taking a data-based approach from pallasite geochronology to put time constraints on giant planet formation. Awarded the Best Master’s Thesis Award at IISER Pune in Earth & Climate Science.',
+    tags: ['Master Thesis', 'Saturn Formation', 'Pallasite Geochronology', 'N-body Simulations', 'Best Thesis Award', 'IISER Pune'],
+    demoUrl: '#awards',
     githubUrl: 'https://github.com/anuja-dr',
-    iconType: 'star'
-  },
-  {
-    id: 'habitable-zone-calculator',
-    title: 'Multi-Parameter Habitable Zone Dynamics Suite',
-    category: 'climate',
-    categoryLabel: 'Habitability & Climate',
-    description: 'Interactive computational toolkit for calculating conservative and optimistic habitable zone boundaries considering stellar spectral type, planetary mass, albedo, and cloud feedback.',
-    tags: ['Python', 'NumPy', 'Matplotlib', 'Interactive Viz', 'Open Source'],
-    demoUrl: 'https://github.com/anuja-dr',
-    githubUrl: 'https://github.com/anuja-dr',
-    iconType: 'orbit'
-  },
-  {
-    id: 'astro-data-pipeline',
-    title: 'Spectrophotometric Data Reduction Pipeline',
-    category: 'tools',
-    categoryLabel: 'Pipelines & Tools',
-    description: 'Automated data reduction and detrending suite for processing ground-based and space-based exoplanet transit light curves with Gaussian processes and systematic error modeling.',
-    tags: ['Python', 'Astropy', 'Gaussian Processes', 'Light Curves', 'Data Pipeline'],
-    demoUrl: 'https://github.com/anuja-dr',
-    githubUrl: 'https://github.com/anuja-dr',
-    iconType: 'chart'
-  },
-  {
-    id: 'biosignature-detectability',
-    title: 'Atmospheric Photochemistry & Biosignature Simulator',
-    category: 'atmosphere',
-    categoryLabel: 'Atmospheres & Spectra',
-    description: '1D photochemical kinetics modeling of non-equilibrium chemical species (O3, CH4, N2O) in oxygenated and anoxic terrestrial exoplanet atmospheres.',
-    tags: ['Photochemistry', 'Chemical Kinetics', 'Biosignatures', 'Exo-Earths'],
-    demoUrl: 'https://github.com/anuja-dr',
-    githubUrl: 'https://github.com/anuja-dr',
-    iconType: 'dna'
+    iconType: 'planet'
   }
 ];
 
@@ -95,20 +85,27 @@ function renderProjects() {
         ${getProjectIcon(project.iconType)}
       </div>
       <div class="project-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+          <span style="font-family: 'Fira Code', monospace; font-size: 0.8rem; font-weight: 600; color: var(--primary-light);">${project.period}</span>
+          <span style="font-size: 0.8rem; color: var(--secondary); font-weight: 600;">${project.institution}</span>
+        </div>
         <h3 class="project-title">${project.title}</h3>
+        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin-bottom: 0.75rem;">
+          Supervisor: <strong style="color: var(--text-primary);">${project.supervisor}</strong>
+        </div>
         <p class="project-description">${project.description}</p>
         <div class="project-tags">
           ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
         </div>
         <div class="project-links">
-          <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View code on GitHub">
+          <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View code / profiles on GitHub">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
               <path d="M9 18c-4.51 2-5-2-7-2"/>
             </svg>
             GitHub
           </a>
-          <a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View project details">
+          <a href="${project.demoUrl}" ${project.demoUrl.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''} class="project-link" aria-label="View details">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
               <line x1="12" y1="16" x2="12" y2="12"/>

@@ -3,18 +3,19 @@
 [![Deploy Portfolio to GitHub Pages](https://github.com/anuja-dr/anujadr.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/anuja-dr/anujadr.github.io/actions/workflows/deploy.yml)
 [![Live Site](https://img.shields.io/badge/Live-Site-6366f1?style=flat&logo=google-chrome&logoColor=white)](https://anuja-dr.github.io)
 
-Personal academic and research portfolio of **Anuja Raorane**, PhD Student at the **Institute of Astrophysics, University of Vienna**, focusing on **Planet Habitability**, exoplanet atmospheres, and computational climate modeling.
+Personal academic and research portfolio of **Anuja Raorane**, PhD Student in Astrophysics at the **University of Vienna** (supervised by Dr. Kristina Kislyakova), focusing on **non-thermal atmospheric escape on Venus, Mars, and early Earth**, and **giant planet formation**.
 
 ---
 
 ## 🌟 Features
 
-- **🪐 Astrophysics & Habitability Showcase**: Detailed sections for research focus, numerical simulations, and observational spectroscopy.
-- **📚 Interactive Publications Hub**: Categorized peer-reviewed articles, preprints, DOI/ADS links, and one-click BibTeX citation copying.
-- **🎤 Conferences & Workshops**: Chronological archive of contributed talks, posters, and summer schools.
+- **🪐 Planetary Science & Atmospheric Escape Showcase**: Research overview on non-thermal atmospheric loss at Venus, Mars, and early Earth, N-body accretion simulations, and Earth spectropolarimetry (ISRO Chandrayaan-3 SHAPE).
+- **📚 Interactive Publications & Theses Hub**: Features peer-reviewed research published in *Icarus* (2024), Master's Thesis, DOI/ADS links, and one-click BibTeX citation copying.
+- **🎤 Conferences, Workshops & Invited Talks**: Archive of presentations across EGU 2026, Space Weather Workshop Graz, Exploring Exoplanets School Bangalore, EPSC-DPS 2025, NISER, and IISER Pune.
+- **🎓 Teaching, Mentorship & Outreach**: Highlights Bachelor's thesis supervision, STEM teaching qualification, symposium organizing (Wienerwald 2025, VISESS), and public science engagement (Long Night of Research).
 - **🎨 Modern Dark & Light Mode**: Seamless theme toggler with persistent `localStorage` memory and OS system preference sync (`prefers-color-scheme`).
 - **📱 Fully Responsive**: Pixel-perfect layout optimized for mobile, tablet, laptop, and desktop displays.
-- **📬 Contact Hub**: Direct copy-to-clipboard email action, academic profile links (NASA ADS, Google Scholar, ORCID), and contact form.
+- **📬 Contact Hub**: Direct copy-to-clipboard email action, LinkedIn, GitHub, academic profile links (NASA ADS, Google Scholar, ORCID), and contact form.
 - **🚀 Automated GitHub Actions CI/CD**: Automatic deployment to GitHub Pages on every push to `main`.
 
 ---

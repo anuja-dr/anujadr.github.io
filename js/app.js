@@ -113,10 +113,10 @@ function initTypewriter() {
   if (!typingElement) return;
 
   const roles = [
-    'Planet Habitability',
-    'Exoplanet Atmospheres',
-    'Computational Astrophysics',
-    'Stellar-Planetary Systems',
+    'Planetary Science',
+    'Atmospheric Evolution & Escape',
+    'Venus, Mars & Early Earth',
+    'Giant Planet Formation',
     'Astrophysics @ Uni Vienna'
   ];
 

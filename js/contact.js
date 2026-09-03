@@ -48,7 +48,7 @@ function setupContactInteractions() {
   const copyBtn = document.getElementById('copy-email-btn');
   if (copyBtn) {
     copyBtn.addEventListener('click', async () => {
-      const email = copyBtn.getAttribute('data-email') || 'anujaraorane08@gmail.com';
+      const email = copyBtn.getAttribute('data-email') || 'anuja.raorane@univie.ac.at';
       try {
         await navigator.clipboard.writeText(email);
         toaster.show('Email copied to clipboard!', 'success');
@@ -104,7 +104,7 @@ function setupContactInteractions() {
 
       setTimeout(() => {
         // Create mailto link for direct mail app fallback
-        const mailtoUrl = `mailto:anujaraorane08@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact from ' + name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+        const mailtoUrl = `mailto:anuja.raorane@univie.ac.at?subject=${encodeURIComponent(subject || 'Portfolio Contact from ' + name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
         
         toaster.show('Thank you! Message queued. Opening mail client...', 'success');
         window.open(mailtoUrl, '_blank');
