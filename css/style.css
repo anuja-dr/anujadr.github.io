@@ -1155,6 +1155,127 @@ a.filter-btn:hover {
   color: #ffffff;
 }
 
+/* Research Interests Card Grid */
+.research-interests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.research-interest-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.research-interest-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-brand);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.research-interest-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.research-interest-card:hover::before {
+  opacity: 1;
+}
+
+.research-interest-card--link {
+  cursor: pointer;
+}
+
+.research-interest-card--link:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.research-interest-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.research-interest-card--link:hover .research-interest-icon-wrap {
+  background: var(--gradient-brand);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.research-interest-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.research-interest-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text-primary);
+  margin-bottom: 0;
+  transition: color var(--transition-fast);
+}
+
+.research-interest-card--link:hover .research-interest-title {
+  color: var(--primary-light);
+}
+
+.research-interest-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  margin-top: auto;
+  padding-top: 1.75rem;
+  transition: color var(--transition-fast);
+}
+
+.research-interest-card--link:hover .research-interest-action {
+  color: #ffffff;
+}
+
+.research-interest-action svg {
+  transition: transform var(--transition-fast);
+}
+
+.research-interest-card--link:hover .research-interest-action svg {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 992px) {
+  .research-interests-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));

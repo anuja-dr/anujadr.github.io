@@ -318,25 +318,56 @@
           <p class="section-subtitle">Investigating planetary atmospheric evolution, solar wind interactions, giant planet accretion, and remote sensing spectroscopy.</p>
         </div>
 
-        <!-- Category Filters -->
-        <div class="filter-bar">
-          <a href="https://ease.univie.ac.at/" target="_blank" rel="noopener noreferrer" class="filter-btn research-tab-link" title="Early Earth, Venus and Mars as Exoplanets (EASE)">
-            <span>Early Earth, Venus and Mars as Exoplanets (EASE)</span>
-            <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 13px; height: 13px; margin-left: 6px; display: inline-block; vertical-align: middle;">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
+        <!-- Research Interests Cards Grid -->
+        <div class="research-interests-grid">
+          <!-- Card 1: EASE (Directs to https://ease.univie.ac.at/) -->
+          <a href="https://ease.univie.ac.at/" target="_blank" rel="noopener noreferrer" class="research-interest-card research-interest-card--link" title="Visit EASE Project Website (ease.univie.ac.at)">
+            <div class="research-interest-icon-wrap">
+              <svg class="research-interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="7"/>
+                <path d="M2.5 14.5c4-2 15-7 19 0"/>
+                <path d="M4 17c3.5-1.5 12-5.5 16 0"/>
+              </svg>
+            </div>
+            <h3 class="research-interest-title">Early Earth, Venus and Mars as Exoplanets (EASE)</h3>
+            <div class="research-interest-action">
+              <span>Visit Website</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </div>
           </a>
-          <button class="filter-btn research-filter-btn active" data-filter="escape">Star-planet Interaction - Non-thermal escape of atmospheres</button>
-          <button class="filter-btn research-filter-btn" data-filter="formation">Planet formation, evolution and links to habitability</button>
-        </div>
 
-        <!-- Dynamic Projects Container (Rendered by js/projects.js) -->
-        <div class="projects-grid" id="projects-container">
-          <noscript>
-            <p>Please enable JavaScript to view research projects.</p>
-          </noscript>
+          <!-- Card 2: Star-planet Interaction -->
+          <article class="research-interest-card">
+            <div class="research-interest-icon-wrap">
+              <svg class="research-interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2"/>
+                <path d="M12 20v2"/>
+                <path d="m4.93 4.93 1.41 1.41"/>
+                <path d="m17.66 17.66 1.41 1.41"/>
+                <path d="M2 12h2"/>
+                <path d="M20 12h2"/>
+                <path d="m6.34 17.66-1.41 1.41"/>
+                <path d="m19.07 4.93-1.41 1.41"/>
+              </svg>
+            </div>
+            <h3 class="research-interest-title">Star-planet Interaction - Non-thermal escape of atmospheres</h3>
+          </article>
+
+          <!-- Card 3: Planet formation, evolution and links to habitability -->
+          <article class="research-interest-card">
+            <div class="research-interest-icon-wrap">
+              <svg class="research-interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"/>
+              </svg>
+            </div>
+            <h3 class="research-interest-title">Planet formation, evolution and links to habitability</h3>
+          </article>
         </div>
       </div>
     </section>
@@ -958,7 +989,6 @@
   </button>
 
   <!-- JavaScript Modules -->
-  <script src="js/projects.js"></script>
   <script src="js/contact.js"></script>
   <script src="js/app.js"></script>
   <script>
