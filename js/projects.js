@@ -8,7 +8,7 @@ const researchProjects = [
     id: 'phd-atmospheric-escape',
     title: 'Non-Thermal Escape Processes on Early Earth, Mars, and Venus',
     category: 'escape',
-    categoryLabel: 'Atmospheric Escape & Evolution',
+    categoryLabel: 'Star-Planet Interaction & Non-Thermal Escape',
     period: '04.2025 – Present',
     institution: 'University of Vienna, Austria',
     supervisor: 'Dr. Kristina Kislyakova',
@@ -22,7 +22,7 @@ const researchProjects = [
     id: 'giant-planet-formation',
     title: 'Giant Planet Formation in the Outer Solar System',
     category: 'formation',
-    categoryLabel: 'Planet Formation',
+    categoryLabel: 'Planet Formation & Evolution',
     period: '06.2023 – 08.2024',
     institution: 'CSFK, Budapest, Hungary',
     supervisor: 'Dr. Ramon Brasser',
@@ -35,8 +35,8 @@ const researchProjects = [
   {
     id: 'spectro-polarimetric-earth',
     title: 'Spectro-Polarimetric Data Regeneration for Earth (Chandrayaan-3 SHAPE)',
-    category: 'spectroscopy',
-    categoryLabel: 'Spectroscopy & Remote Sensing',
+    category: 'formation',
+    categoryLabel: 'Habitability & Remote Sensing',
     period: '11.2023 – 01.2024',
     institution: 'U.R. Rao Satellite Centre, ISRO, Bangalore, India',
     supervisor: 'Mr. Bhavesh Jaiswal',
@@ -50,7 +50,7 @@ const researchProjects = [
     id: 'saturn-growth-timescales',
     title: 'Formation of Saturn and Distribution of its Growth Times',
     category: 'formation',
-    categoryLabel: 'Planet Formation',
+    categoryLabel: 'Planet Formation & Evolution',
     period: '06.2022 – 04.2023',
     institution: 'IISER Pune, India',
     supervisor: 'Dr. Ramon Brasser, Dr. Shreyas Managave',
@@ -125,23 +125,32 @@ function setupProjectFilters() {
   const filterButtons = document.querySelectorAll('.research-filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
+  function applyFilter(filter) {
+    projectCards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      if (filter === 'all' || category === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+      applyFilter(filter);
     });
   });
+
+  // Apply initial filter based on active button
+  const activeBtn = document.querySelector('.research-filter-btn.active');
+  if (activeBtn) {
+    applyFilter(activeBtn.getAttribute('data-filter'));
+  }
 }
 
 // Initialise when DOM is ready

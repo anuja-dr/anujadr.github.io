@@ -1124,6 +1124,10 @@ section {
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .filter-btn:hover,
@@ -1132,6 +1136,10 @@ section {
   color: #ffffff;
   border-color: transparent;
   box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+a.filter-btn:hover {
+  color: #ffffff;
 }
 
 .projects-grid {
