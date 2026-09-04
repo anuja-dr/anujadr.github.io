@@ -12,7 +12,6 @@ Personal academic and research portfolio of **Anuja Raorane**, PhD Student in As
 - **🪐 Planetary Science & Atmospheric Escape Showcase**: Research overview on non-thermal atmospheric loss at Venus, Mars, and early Earth, N-body accretion simulations, and Earth spectropolarimetry (ISRO Chandrayaan-3 SHAPE).
 - **📚 Interactive Publications & Theses Hub**: Features peer-reviewed research published in *Icarus* (2024), Master's Thesis, DOI/ADS links, and one-click BibTeX citation copying.
 - **🎤 Conferences, Workshops & Invited Talks**: Archive of presentations across EGU 2026, Space Weather Workshop Graz, Exploring Exoplanets School Bangalore, EPSC-DPS 2025, NISER, and IISER Pune.
-- **🎓 Teaching, Mentorship & Outreach**: Highlights Bachelor's thesis supervision, STEM teaching qualification, symposium organizing (Wienerwald 2025, VISESS), and public science engagement (Long Night of Research).
 - **🎨 Modern Dark & Light Mode**: Seamless theme toggler with persistent `localStorage` memory and OS system preference sync (`prefers-color-scheme`).
 - **📱 Fully Responsive**: Pixel-perfect layout optimized for mobile, tablet, laptop, and desktop displays.
 - **📬 Contact Hub**: Direct copy-to-clipboard email action, LinkedIn, GitHub, academic profile links (NASA ADS, Google Scholar, ORCID), and contact form.
